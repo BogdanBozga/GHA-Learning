@@ -1,0 +1,12 @@
+name: Workflow-1
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print something
+        run: echo "Hello GHA"
+        run: echo "No name"
+      - name: Print by
+        run: echo "byyyyy"
+        
