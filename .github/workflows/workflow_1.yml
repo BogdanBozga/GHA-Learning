@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Print something
-        run: echo "Hello GHA"
-      - name: Another pring
-        run: echo "No name"
+        run: | 
+          echo "Hello GHA"
+          echo "No name"
       - name: Print by
         run: echo "byyyyy"
         
