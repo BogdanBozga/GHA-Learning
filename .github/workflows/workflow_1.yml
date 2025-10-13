@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: Print something
         run: echo "Hello GHA"
+      - name: Another pring
         run: echo "No name"
       - name: Print by
         run: echo "byyyyy"
