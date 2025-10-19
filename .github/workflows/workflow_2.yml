@@ -13,8 +13,6 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: '18'
-            - name: "Move to directory"
-              run: cd Project1
             - name: "Where I'm"
               run: "echo $PWD"
             - name: "Install dependencies"
@@ -31,8 +29,6 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: '18'
-            - name: "Move to directory"
-              run: cd Project1
             - name: "Where I'm"
               run: "echo $PWD"
             - name: "Install dependencies"
