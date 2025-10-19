@@ -1,8 +1,5 @@
 name: IssueWorkflow
 on: issues
-defaults:
-  run:
-    working-directory: ./Project1Exercise
 jobs:
     JustEcho:
         runs-on: ubuntu-latest
