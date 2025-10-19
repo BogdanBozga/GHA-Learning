@@ -16,7 +16,7 @@ jobs:
             - name: "Where I'm"
               run: "echo $PWD"
             - name: "Install dependencies"
-              run: npm ci --workspace Project1
+              run: npm ci
             - name: "Run tests"
               run: npm test
     deploy:
@@ -32,7 +32,7 @@ jobs:
             - name: "Where I'm"
               run: "echo $PWD"
             - name: "Install dependencies"
-              run: npm ci --workspace Project1
+              run: npm ci
             - name: "Build project"
               run: npm run build
             - name: "Deploy"
