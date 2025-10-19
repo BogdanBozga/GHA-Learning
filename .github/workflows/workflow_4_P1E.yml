@@ -1,0 +1,43 @@
+name: Test Project
+on: [push]
+defaults:
+  run:
+    working-directory: ./Project1Exercise
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Get code"
+              uses: actions/checkout@v3
+            - name: "Install NodeJS"
+              uses: actions/setup-node@v3
+              with:
+                node-version: '18'
+            - name: "Where I'm"
+              run: "echo $PWD"
+            - name: "Install dependencies"
+              run: npm ci
+            - name: "Build Project"
+              run: npm run build
+            - name: "Run lint"
+              run: npm run lint
+            - name: "Run tests"
+              run: npm run test
+    deploy:
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Get code"
+              uses: actions/checkout@v3
+            - name: "Install NodeJS"
+              uses: actions/setup-node@v3
+              with:
+                node-version: '18'
+            - name: "Where I'm"
+              run: "echo $PWD"
+            - name: "Install dependencies"
+              run: npm ci
+            - name: "Build project"
+              run: npm run build
+            - name: "Deploy"
+              run: echo "Deploying..."
